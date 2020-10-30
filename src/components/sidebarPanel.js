@@ -1,3 +1,6 @@
+import Texts from "../panels/texts";
+import Photo from "../panels/photo";
+
 function SidebarPanel(props) {
     return (
         <div className="panel">
@@ -10,8 +13,20 @@ function SidebarPanel(props) {
                 </div>
             </div>
             <input type="search" className="search" placeholder="Search template..." />
+            {renderPanel(props.menu.name)}
         </div>
     );
 }
+
+function renderPanel(param) {
+    switch(param) {
+      case 'Text':
+        return <Texts/>;
+      case 'Photo':
+        return <Photo/>;
+      default:
+        return <div></div>;
+    }
+  }
 
 export default SidebarPanel;

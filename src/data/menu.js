@@ -28,6 +28,12 @@ const menu = [
         name: 'Animations',
         hasTab: false,
         icon: 'fas fa-paw'
+    },
+    {
+        id: 6,
+        name: 'Text',
+        hasTab: false,
+        icon: 'fas fa-text-width'
     }
 ]
 
