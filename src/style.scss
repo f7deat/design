@@ -75,3 +75,19 @@ body {
       }
     }
   }
+.text-wrapper {
+  margin-top: 4px;
+  .text-group {
+    margin-top: 1rem;
+    .panel-item {
+      cursor: pointer;
+      padding: 8px;
+      margin-bottom: 8px;
+      &:hover {
+        background-color: #343441;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
