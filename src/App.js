@@ -1,3 +1,4 @@
+import Zoom from './components/zoom';
 import Header from './layout/header';
 import Sidebar from './layout/sidebar';
 
@@ -10,7 +11,7 @@ function App() {
           <Sidebar/>
         </div>
         <div>
-
+          <Zoom/>
         </div>
       </div>
     </div>

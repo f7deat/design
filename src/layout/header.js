@@ -22,7 +22,7 @@ function Header() {
                 <div className="mr-4">
                     <i className="fas fa-external-link-alt"></i>
                 </div>
-                <div className="mr-4" style={{
+                <div className="mr-4 pointer" style={{
                     color: 'rgb(33, 83, 204)',
                     borderRadius: 8,
                     boxShadow: 'rgb(33, 83, 204) 0px 0px 0px 2px inset',
