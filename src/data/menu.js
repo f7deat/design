@@ -32,7 +32,7 @@ const menu = [
     {
         id: 6,
         name: 'Text',
-        hasTab: false,
+        hasTab: true,
         icon: 'fas fa-text-width'
     }
 ]

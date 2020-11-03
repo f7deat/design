@@ -12,7 +12,7 @@ function App() {
         <div style={{width: 408}}>
           <Sidebar/>
         </div>
-        <div>
+        <div style={{width: 'calc(100vw - 408px)'}}>
           <Content/>
           <Zoom/>
           <Page/>
