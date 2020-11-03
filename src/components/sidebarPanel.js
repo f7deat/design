@@ -1,5 +1,6 @@
 import Texts from "../panels/texts";
 import Photo from "../panels/photo";
+import Template from "../panels/template";
 
 function SidebarPanel(props) {
     return (
@@ -24,6 +25,8 @@ function renderPanel(param) {
         return <Texts/>;
       case 'Photo':
         return <Photo/>;
+      case 'Template':
+        return <Template/>;
       default:
         return <div></div>;
     }

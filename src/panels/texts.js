@@ -17,7 +17,7 @@ function Texts() {
                 <div className="row">
                     <div className="col-md-6">
                         <div className="panel-item">
-                        <img src="https://static.crello.com/api/templates/5f967e13a637ee11e36955cd/thumbnails/0?size=360" alt="" className="img-fluid"/>
+                            <img src="https://static.crello.com/api/templates/5f967e13a637ee11e36955cd/thumbnails/0?size=360" alt="" className="img-fluid"/>
                         </div>
                     </div>
                     <div className="col-md-6">
