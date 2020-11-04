@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 
 function Zoom() {
@@ -7,7 +8,7 @@ function Zoom() {
             <div className="d-flex justify-content-center align-items-center">
                 <button className="btn" onClick={() => setPersen(persen - 10)}>
                     <i className="fas fa-search-minus"></i></button>
-                <div className="persen">{persen}%</div>
+                <div className="pointer hover:bg-gray-200 rounded px-2 py-1 fw-500">{persen}%</div>
                 <button className="btn" onClick={() => setPersen(persen + 10)}>
                     <i className="fas fa-search-plus"></i></button>
             </div>

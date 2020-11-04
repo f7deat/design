@@ -1,3 +1,5 @@
+import React from "react"
+
 function Tool() {
     return (
         <div className="p-2 bg-white w-100 shadow-sm d-flex" style={{marginTop: 1}}>

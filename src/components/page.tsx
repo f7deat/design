@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 
 let pageItems = [
@@ -21,7 +22,7 @@ function Page() {
     )
 }
 
-function PageBar(props) {
+function PageBar(props: any) {
 
     function addPage() {
          let id = pageItems[pageItems.length - 1].id + 1;
@@ -48,7 +49,7 @@ function PageBar(props) {
     )
 }
 
-function PageItem(props) {
+function PageItem(props: any) {
     return (
         <div className="mb-1 p-2 d-flex align-items-center justify-content-center pointer page-item">
             <div className="mr-1">{props.pageIndex}</div>

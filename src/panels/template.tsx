@@ -1,3 +1,5 @@
+import React from "react"
+
 function Template() {
     return(
         <div className="row mt-3 no-gutters">

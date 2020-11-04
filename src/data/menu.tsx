@@ -1,4 +1,11 @@
-const menu = [
+interface Menu {
+    id: number;
+    name: string;
+    hasTab: boolean;
+    icon: string
+}
+
+const menu: Menu[] = [
     {
         id: 1,
         name: 'Template',

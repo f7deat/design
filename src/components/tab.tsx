@@ -1,4 +1,6 @@
-function Tab(props) {
+import React from "react";
+
+function Tab(props: any) {
     return (
         <div className={props.menu.hasTab ? "tab" : "d-none"}>
             {renderName(props.menu.name)}
@@ -6,7 +8,7 @@ function Tab(props) {
     )
 }
 
-function renderName(param) {
+function renderName(param: string) {
     switch (param) {
         case 'Videos':
             return (

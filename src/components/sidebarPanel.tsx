@@ -1,9 +1,10 @@
 import Texts from "../panels/texts";
 import Photo from "../panels/photo";
 import Template from "../panels/template";
-import Tab from "../components/tab";
+import Tab from "./tab";
+import React from "react";
 
-function SidebarPanel(props) {
+function SidebarPanel(props: { menu: { name: any; hasTab?: any; }; }) {
   return (
     <div className="panel">
       <Tab menu={props.menu} />
@@ -13,7 +14,7 @@ function SidebarPanel(props) {
   );
 }
 
-function renderPanel(param) {
+function renderPanel(param: any) {
   switch (param) {
     case 'Text':
       return <Texts />;

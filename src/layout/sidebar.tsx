@@ -1,3 +1,4 @@
+import React from 'react';
 import {useState} from 'react';
 import SidebarPanel from "../components/sidebarPanel";
 import menu from '../data/menu';

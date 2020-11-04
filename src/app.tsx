@@ -1,3 +1,4 @@
+import React from 'react';
 import Page from './components/page';
 import Zoom from './components/zoom';
 import Content from './contents/content';
