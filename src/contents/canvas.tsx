@@ -1,21 +1,28 @@
 import React, { useEffect, useRef } from 'react'
+import { connect } from 'react-redux';
 
-function Canvas() {
+const mapStateToProps = (state: any) => ({
+  width: state.canvasReducer.width,
+  height: state.canvasReducer.height
+})
+
+function Canvas(props: any) {
   
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
       const ctx = canvasRef?.current?.getContext("2d");
       if (ctx) {
-        ctx.fillText("haha", 10, 20)
+        ctx.font = "40px Arial"
+        ctx.fillText("Hello world", 40, 60);
       }
-  }, [canvasRef])
+  }, [])
 
   return (
-    <div className="p-4">
-      <canvas ref={canvasRef} />
+    <div className="d-flex align-items-center justify-content-center" style={{height: 'calc(100% - 50px)'}}>
+      <canvas ref={canvasRef} width={props.width} height={props.height} />
     </div>
   )
 }
 
-export default Canvas
+export default connect(mapStateToProps)(Canvas)

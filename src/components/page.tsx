@@ -35,7 +35,7 @@ function PageBar(props: any) {
                 <div className="flex-grow-1">
                     Pages &bull; 1
                 </div>
-                <i className="fas fa-angle-double-right text-black-50 pointer" onClick={() => props.setTogglePageBar(!props.togglePageBar)}></i>
+                <i className="fas fa-angle-double-right text-black-50 cursor-pointer" onClick={() => props.setTogglePageBar(!props.togglePageBar)}></i>
             </div>
             {pageItems.map(x => {
                 return (
@@ -51,7 +51,7 @@ function PageBar(props: any) {
 
 function PageItem(props: any) {
     return (
-        <div className="mb-1 p-2 d-flex align-items-center justify-content-center pointer page-item">
+        <div className="mb-1 p-2 d-flex align-items-center justify-content-center cursor-pointerpage-item">
             <div className="mr-1">{props.pageIndex}</div>
             <div className="flex-grow-1 border rounded" style={{ height: 70 }}>
 
