@@ -18,9 +18,13 @@ function Canvas(props: any) {
       }
   }, [])
 
+  function handleCanvasClick(e: any) {
+    console.log(e)
+  }
+
   return (
     <div className="d-flex align-items-center justify-content-center" style={{height: 'calc(100% - 50px)'}}>
-      <canvas ref={canvasRef} width={props.width} height={props.height} />
+      <canvas ref={canvasRef} width={props.width} height={props.height} onClick={(e) => handleCanvasClick(e)}/>
     </div>
   )
 }

@@ -26,10 +26,10 @@ function NewDesign(props: any) {
                             <h5 className="text-center"> Choose Format and Start Design</h5>
                         </div>
                         <div className="d-flex justify-content-center mb-4">
-                            <div className="p-2 text-muted cursor-pointer">
+                            <div className="py-2 px-4 text-muted cursor-pointer">
                                 Popular Formats
                             </div>
-                            <div className="p-2 cursor-default">
+                            <div className="py-2 px-4 cursor-default border-bottom border-primary">
                                 Custom Size
                             </div>
                         </div>
@@ -38,9 +38,18 @@ function NewDesign(props: any) {
                                 <img className="img-thumbnail" src={previewImage} alt="tandc" />
                             </div>
                         </div>
-                        <div className="mt-4 text-center d-flex mx-4 px-4">
-                                <input type="number" className="form-control mr-2" onChange={(e) => setWidth(e.currentTarget.value)}/>
-                                <input type="number" className="form-control" onChange={(e) => setHeight(e.currentTarget.value)}/>
+                        <div className="mt-4 d-flex mx-4 px-4 align-items-center">
+                                <input type="number" className="form-control mr-3" onChange={(e) => setWidth(e.currentTarget.value)}/>
+                                <i className="fas fa-unlock mr-3 text-gray-400"></i>
+                                <input type="number" className="form-control mr-3" onChange={(e) => setHeight(e.currentTarget.value)}/>
+                                <select className="form-control">
+                                    <option>px</option>
+                                    <option>cm</option>
+                                    <option>in</option>
+                                </select>
+                        </div>
+                        <div className="mt-3 mx-4 px-4">
+                            <button className="btn btn-block btn-primary" type="button">Create Design</button>
                         </div>
                     </div>
                 </div>

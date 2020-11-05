@@ -43,10 +43,9 @@ body {
     outline: none;
   }
   
-  .sidebarMenuItem:hover {
-    color: #2153cc;
-    cursor: pointer;
-  }
+.hover\:text-white:hover {
+  color: #fff;
+}
   
   .zoom {
     position: absolute;
@@ -154,4 +153,24 @@ body {
 canvas {
   background-color: #fff;
   border: 1px solid #3262d39d;
+}
+
+.text-gray-200 {
+  color: $gray-200;
+}
+
+.text-gray-400 {
+  color: $gray-400;
+}
+
+.text-gray-500 {
+  color: $gray-500;
+}
+
+.text-gray-600 {
+  color: $gray-600;
+}
+
+.text-gray-700 {
+  color: $gray-700;
 }

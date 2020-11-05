@@ -3,8 +3,13 @@ import Photo from "../panels/photo";
 import Template from "../panels/template";
 import Tab from "./tab";
 import React from "react";
+import { connect } from "react-redux";
 
-function SidebarPanel(props: { menu: { name: any; hasTab?: any; }; }) {
+const mapStateToProps = (state: any) => ({
+  menu: state.menuReducer.menu.find((x: any) => x.isActive === true)
+})
+
+function SidebarPanel(props: any) {
   return (
     <div className="panel">
       <Tab menu={props.menu} />
@@ -27,4 +32,4 @@ function renderPanel(param: any) {
   }
 }
 
-export default SidebarPanel;
+export default connect(mapStateToProps)(SidebarPanel)
