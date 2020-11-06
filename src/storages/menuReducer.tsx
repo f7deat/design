@@ -1,4 +1,7 @@
+import { MENU_TYPE, Menu } from "./types"
+
 const InitialState: any = {
+    currentMenu: 'Template',
     menu: [
         {
             id: 1,
@@ -47,16 +50,19 @@ const InitialState: any = {
 
 export const menuReducer = (state = InitialState, action: any) => {
     switch (action.type) {
-        case 'ACTIVE_MENU':
+        case MENU_TYPE.ACTIVE_MENU:
             state.menu.forEach((value: any) => {
                 if (value.id === action.payload) {
                     value.isActive = true
+                    state.currentMenu = value.name
                 } else {
                     value.isActive = false
                 }
             })
             return { ...state }
+        case MENU_TYPE.GET_MENU:
+            return state.menu.find((x: Menu) => x.id === action.payload)
         default:
-            return { ...state }
+            return state
     }
 }

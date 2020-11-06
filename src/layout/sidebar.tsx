@@ -1,8 +1,12 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import SidebarPanel from '../components/sidebarPanel';
 import SidebarMenu from "./sidebarMenu";
 
 function Sidebar() {
+    
+  const menu = useSelector((state: any) => state.menuReducer.currentMenu);
+
   return (
     <div className="sidebar">
         <div className="d-flex">
@@ -11,7 +15,7 @@ function Sidebar() {
             </div>
             <div className="w-100">
                 <div className="font-weight-bold text-white px-2" style={{fontSize: 20, padding: '16px 0'}}>
-                    Template
+                    {menu}
                 </div>
                 <SidebarPanel/>
             </div>

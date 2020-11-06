@@ -1,31 +1,30 @@
-import React from "react";
-import { connect } from "react-redux";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { activeMenu } from "../storages/actions/menuAction";
 import { Menu } from "../storages/types";
 
-const mapStateToProps = (state: any) => ({
-    menu: state.menuReducer.menu
-})
+function SidebarMenu() {
 
-const mapDispatchToProps = (dispatch: any) => ({
-    activeMenu: (id: number) => {
-        dispatch({
-            type: 'ACTIVE_MENU',
-            payload: id
-        })
+    const dispatch = useDispatch();
+    const menus = useSelector((state: any) => state.menuReducer.menu);
+
+    const [activeId, setActiveId] = useState(menus[0].id)
+
+    const handleMenuClick = (id: number) => {
+        dispatch(activeMenu(id))
+        setActiveId(id)
     }
-})
 
-function SidebarMenu(props: any) {
     return (
         <div className="sidebarMenu">
             {
-                props.menu.map((x: Menu) => {
+                menus.map((x: Menu) => {
                     return (
-                        <div key={x.id} className={x.isActive ? "p-3 text-white cursor-default" : "p-3 cursor-pointer hover:text-white text-gray-600"} onClick={() => props.activeMenu(x.id)}>
+                        <div key={x.id} className={activeId === x.id ? "p-3 text-white cursor-default" : "p-3 cursor-pointer hover:text-white text-gray-600"} onClick={() => handleMenuClick(x.id)}>
                             <div className="text-center">
                                 <i className={x.icon} style={{ fontSize: 24 }}></i>
                             </div>
-                            <div className="text-muted" style={{ fontSize: 8 }}>
+                            <div style={{ fontSize: 8 }}>
                                 {x.name}
                             </div>
                         </div>
@@ -36,4 +35,4 @@ function SidebarMenu(props: any) {
     );
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SidebarMenu)
+export default SidebarMenu

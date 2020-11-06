@@ -1,4 +1,7 @@
-export const MENU = 'MENU';
+export const MENU_TYPE = {
+    GET_MENU: 'GET_MENU',
+    ACTIVE_MENU: 'ACTIVE_MENU'
+};
 
 export interface Size {
     width: string;
