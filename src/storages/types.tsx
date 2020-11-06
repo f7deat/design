@@ -1,7 +1,11 @@
 export const MENU_TYPE = {
     GET_MENU: 'GET_MENU',
     ACTIVE_MENU: 'ACTIVE_MENU'
-};
+}
+
+export const PHOTO_TYPE = {
+    SELECT_IMAGE: 'SELECT_IMAGE'
+}
 
 export interface Size {
     width: string;
