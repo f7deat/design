@@ -30,7 +30,7 @@ function PageBar(props: any) {
     }
 
     return (
-        <div className={props.togglePageBar ? "page-bar p-2" : "d-none"}>
+        <div className={props.togglePageBar ? "page-bar shadow-sm p-2" : "d-none"}>
             <div className="d-flex align-items-center mb-2">
                 <div className="flex-grow-1">
                     Pages &bull; 1

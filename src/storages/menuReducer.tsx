@@ -44,6 +44,13 @@ const InitialState: any = {
             hasTab: true,
             icon: 'fas fa-text-width',
             isActive: false
+        },
+        {
+            id: 7,
+            name: 'Draw',
+            hasTab: true,
+            icon: 'fas fa-pencil-ruler',
+            isActive: false
         }
     ]
 }
