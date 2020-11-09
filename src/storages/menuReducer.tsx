@@ -1,4 +1,4 @@
-import { MENU_TYPE, Menu } from "./types"
+import { MENU_TYPE } from "./types"
 
 const InitialState: any = {
     currentMenu: 'Template',
@@ -68,7 +68,7 @@ export const menuReducer = (state = InitialState, action: any) => {
             })
             return { ...state }
         case MENU_TYPE.GET_MENU:
-            return state.menu.find((x: Menu) => x.id === action.payload)
+            return state.menu.find((x: any) => x.id === action.payload)
         default:
             return state
     }

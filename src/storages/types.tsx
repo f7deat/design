@@ -7,15 +7,7 @@ export const PHOTO_TYPE = {
     SELECT_IMAGE: 'SELECT_IMAGE'
 }
 
-export interface Size {
-    width: string;
-    height: string;
-}
-
-export interface Menu {
-    id: number;
-    name: string;
-    hasTab: boolean;
-    icon: string,
-    isActive: boolean
+export const PAGE_TYPE = {
+    ACTIVE_PAGE: 'ACTIVE_PAGE',
+    ADD_PAGE: 'ADD_PAGE'
 }
