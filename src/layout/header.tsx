@@ -1,11 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
+import DownloadButton from '../components/downloads/downloadButton'
+import DownloadModal from '../components/downloads/downloadModal'
 import NewDesign from '../modals/newDesign'
 
 function Header() {
 
     const [editable, setEditable] = useState(true)
     const [showNewDesign, setShowNewDesign] = useState(false)
+    const [isShowDownload, setIsShowDownload] = useState(false)
 
     return (
         <div>
@@ -38,18 +41,11 @@ function Header() {
                     <div className="px-2 py-1 mr-3 rounded cursor-pointerhover:bg-gray-200">
                         <i className="fas fa-external-link-alt"></i>
                     </div>
-                    <div className="mr-4 cursor-pointer" style={{
-                        color: 'rgb(33, 83, 204)',
-                        borderRadius: 8,
-                        boxShadow: 'rgb(33, 83, 204) 0px 0px 0px 2px inset',
-                        padding: '10px 16px',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}><i className="fas fa-download mr-2"></i>Download</div>
+                    <DownloadButton isShowDownload={isShowDownload} setIsShowDownload={setIsShowDownload}/>
                 </div>
             </div>
             <NewDesign showNewDesign={showNewDesign} setShowNewDesign={setShowNewDesign}/>
+            <DownloadModal isShowDownload={isShowDownload} setIsShowDownload={setIsShowDownload}/>
         </div>
     )
 }

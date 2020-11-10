@@ -11,8 +11,7 @@ export const photoReducer = (state = InitialState, action: any) => {
             if (image) {
                 return { ...state }
             }
-            state.images.push(action.payload)
-            return { ...state }
+            return { ...state, images: [...state.images, action.payload] }
         default:
             return state
     }
